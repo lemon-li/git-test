@@ -125,7 +125,7 @@ pipeline {
             // }
             environment {
                 GITHUB_TOKEN = "${env.GITHUB_TOKEN}"
-                GPG_PRIVATE_KEY = "${secret}" // credentials('gpg-private-key')
+                GPG_PRIVATE_KEY = credentials('gpg-private-key')
                 GPG_FINGERPRINT = "admin <admin@wengcx.top>"
             }
             steps {
